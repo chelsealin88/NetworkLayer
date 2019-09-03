@@ -13,7 +13,7 @@ public typealias Parameters = [ String : Any ]
 
 public protocol ParameterEncoder {
     
-    static func encoder(urlRequest: inout URLRequest, with Parameter: Parameters) throws
+    func encoder(urlRequest: inout URLRequest, with parameters: Parameters) throws
 }
 
 
@@ -27,19 +27,28 @@ public enum ParameterEncoding {
                        bodyParameters: Parameters?,
                        urlParameters: Parameters?) throws {
         
-//        do {
-//            
-//            switch self {
-//            case .urlEncoding:
-//                guard let urlParameters = urlParameters else { return }
-////                try 
-//            default:
-//                <#code#>
-//            }
-//            
-//        } catch {
-//            throw error
-//        }
+        do {
+            
+            switch self {
+                
+            case .urlEncoding:
+                guard let urlParameters = urlParameters else { return }
+                try URLParameterEncoder().encoder(urlRequest: &urlRequest, with: urlParameters)
+            
+            case .jsonEncoding:
+                guard let bodyParameters = bodyParameters else { return }
+                try JSONParameterEncoder().encoder(urlRequest: &urlRequest, with: bodyParameters)
+            
+            case .urlAndJsonEncoding:
+                guard let bodyParameters = bodyParameters, let urlParameters = urlParameters else { return }
+                try URLParameterEncoder().encoder(urlRequest: &urlRequest, with: urlParameters)
+                try JSONParameterEncoder().encoder(urlRequest: &urlRequest, with: bodyParameters)
+                
+            }
+            
+        } catch {
+            throw error
+        }
         
         
     }
