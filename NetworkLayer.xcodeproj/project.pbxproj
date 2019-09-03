@@ -17,6 +17,8 @@
 		5E1260C6231E3ACF003FF871 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1260C5231E3ACF003FF871 /* ParameterEncoding.swift */; };
 		5E1260CA231E4059003FF871 /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1260C9231E4059003FF871 /* URLParameterEncoding.swift */; };
 		5E1260CC231E43F4003FF871 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1260CB231E43F4003FF871 /* JSONParameterEncoder.swift */; };
+		5E1260CE231E47B8003FF871 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1260CD231E47B8003FF871 /* NetworkRouter.swift */; };
+		5E1260D0231E4ABC003FF871 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1260CF231E4ABC003FF871 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		5E1260C5231E3ACF003FF871 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
 		5E1260C9231E4059003FF871 /* URLParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
 		5E1260CB231E43F4003FF871 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		5E1260CD231E47B8003FF871 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		5E1260CF231E4ABC003FF871 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				5E1260BF231E36E3003FF871 /* EndPointType.swift */,
 				5E1260C1231E378F003FF871 /* HTTPMethod.swift */,
 				5E1260C3231E3980003FF871 /* HTTPTask.swift */,
+				5E1260CD231E47B8003FF871 /* NetworkRouter.swift */,
+				5E1260CF231E4ABC003FF871 /* Router.swift */,
 			);
 			name = Service;
 			path = Manager/Service;
@@ -193,8 +199,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E1260C4231E3980003FF871 /* HTTPTask.swift in Sources */,
+				5E1260CE231E47B8003FF871 /* NetworkRouter.swift in Sources */,
 				5E1260C0231E36E3003FF871 /* EndPointType.swift in Sources */,
 				5E1260C6231E3ACF003FF871 /* ParameterEncoding.swift in Sources */,
+				5E1260D0231E4ABC003FF871 /* Router.swift in Sources */,
 				5E1260A8231E3466003FF871 /* AppDelegate.swift in Sources */,
 				5E1260CA231E4059003FF871 /* URLParameterEncoding.swift in Sources */,
 				5E1260CC231E43F4003FF871 /* JSONParameterEncoder.swift in Sources */,
